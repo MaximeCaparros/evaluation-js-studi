@@ -1,4 +1,118 @@
-.titre{
-    text-align: center;
+* {
+    box-sizing: border-box;
+}
+
+
+body {
+    background-color: grey;
+    font-family: Lato;
+}
+
+.box-game {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 1000px;
+    transform: translate(-50%, -50%);
+    background-color: white;
 
 }
+
+.player-0-box,
+.player-1-box {
+    width: 50%;
+    float: left;
+    padding: 100px;
+}
+
+.player-name {
+    font-size: 40px;
+    text-align: center;
+    position: relative;
+    text-transform: uppercase;
+    font-weight: 100;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.player-score {
+    font-size: 100px;
+    text-align: center;
+    font-weight: 100;
+    color: #EB4D4D;
+    margin-bottom: 100px;
+}
+
+.point { background-color: #f7f7f7; }
+.point .player-name { font-weight: 400; }
+
+.point .player-name::after {
+    content: "\2022";
+    font-size: 50px;
+    position: absolute;
+    color: #EB4D4D;
+    top: -10px;
+    right: 10px;
+    
+}
+
+.player-turn-box {
+    background-color: #da5656;
+    color: #fff;
+    width: 45%;
+    margin: auto;
+    padding: 15px;
+    text-align: center;
+}
+
+.player-turn-label {
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    font-size: 15px;
+    color: #222;
+}
+
+.player-turn-score {
+    font-size: 35px;
+}
+
+button {
+    position: absolute;
+    width: 200px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: rgb(49, 48, 48);
+    background: none;
+    border: none;
+    font-family: Lato;
+    font-size: 20px;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+button:hover { font-weight: 800; }
+button:hover i { margin-right: 20px; }
+
+i {
+    color: #EB4D4D;
+    display: inline-block;
+    margin-right: 15px;
+    font-size: 35px;
+    transition: margin 0.5s;
+}
+
+.btn-new { top: 60px;}
+.btn-roll { top: 400px;}
+.btn-hold { top: 460px;}
+
+.dice {
+    position: absolute;
+    left: 50%;
+    top: 200px;
+    transform: translateX(-50%);
+    height: 120px;
+}
+
+.winner .player-name { font-weight: 300; color: #EB4D4D; }
+
+
